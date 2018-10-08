@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gchennakrishna3/Mad-Trucker-Game.git"
+    "url": "git@github.com/gchennakrishna3/Mad-Trucker-Game.git"
   },
   "author": "Chennakrishna Gonuguntla",
   "license": "ISC",
