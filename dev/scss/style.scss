@@ -1,0 +1,80 @@
+@mixin horizontal-translate($time) {
+    -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -ms-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+	margin-left: 100% !important;
+	transform: translate(-100%, 0);
+}
+
+.car {
+	&__list-item {
+		display: flex;
+		border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+		margin-bottom: 30px;
+	}
+
+	&__race-track {
+		flex: 1 1 auto;
+	}
+
+	&__bet,
+	&__position {
+		margin: 0 5px;
+		font-weight: bold;
+	}
+
+	&__model {
+		margin: 0 5px;
+	}
+
+	&__race-track::before {
+		content: " " attr(data-bet) " ";
+	}
+
+	&__horizontal-translate1 {
+		@include horizontal-translate(1s);
+	}
+
+	&__horizontal-translate2 {
+		@include horizontal-translate(2s);
+	}
+
+	&__horizontal-translate3 {
+		@include horizontal-translate(3s);
+	}
+
+	&__horizontal-translate4 {
+		@include horizontal-translate(4s);
+	}
+
+	&__bet-dollar {
+		float: left;
+		margin-left: -10%;
+		line-height: 2em;
+	}
+}
+
+.game {
+	text-shadow: 4px 4px 4px #ec4012;
+
+	&-final-result {
+
+	}
+
+	&-reset__image,
+	&-player__image {
+		cursor: pointer;
+		max-width: 110px;
+		height: 110px;
+	}
+
+	&-player__funds {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    text-shadow: 2px 2px 2px #ec4012;
+	    transform: translate(-50%, -50%);
+	}
+}
